@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<title>ReactJS基础入门</title>
+		<script src="js/react.js"></script>
+    	<script src="js/react-dom.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script><!---->
+	</head>
+	<body>
+		<div id="rdemo"></div>
+		<script type="text/babel">
+			var Starpipe=React.createClass({
+				render:function(){
+					return <div>开始学习react了，{this.props.name}</div>
+				}
+			});
+			ReactDOM.render(
+				<Starpipe name='韦双' />,
+				document.getElementById('rdemo')
+			)
+		</script>
+	</body>
+</html>
