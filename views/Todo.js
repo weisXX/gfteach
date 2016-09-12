@@ -62,9 +62,9 @@ class Todo extends React.Component {
 	render() {
 		return <div>
 		 	<h3>TODO</h3>
-			<TodoItem items={this.state.items} deleteFun={this.deleteFun} />
-			<input type="text" onChange={this.changeFun} value={this.state.text}/>
-			<button onClick={this.addFun}>{'Add #'+(this.state.items.length + 1)}</button>
+			<TodoItem items={this.state.items} deleteFun={this.deleteFun.bind(this)} />
+			<input type="text" onChange={this.changeFun.bind(this)} value={this.state.text}/>
+			<button onClick={this.addFun.bind(this)}>{'Add #'+(this.state.items.length + 1)}</button>
 		</div>;
 	}
 }; //);
